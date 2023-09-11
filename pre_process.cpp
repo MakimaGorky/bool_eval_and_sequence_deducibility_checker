@@ -80,49 +80,6 @@ string getVariables(const string &input, vector<variable> variables) {
     return "variables success";
 }
 
-string getOperations(const string &input, stack<operation> &operations) {
-    stack<string> opers;
-
-    int varStart = -1;
-    int varEnd = -1;
-
-    for (int i {}; i < input.size(); i++){
-        string cur {input[i]};
-        if (input[i] == ' '){
-            varEnd = i;
-            if (varStart != -1)
-                opers.push(stringSlice(input, varStart, varEnd));
-
-            varStart = -1;
-            continue;
-        }
-        else if (std::find(special_symbols.begin(), special_symbols.end(), cur) != special_symbols.end()){
-            if (varStart == -1)
-                varStart = i;
-        }
-        else {
-            varEnd = i;
-            if (varStart != -1)
-                opers.push(stringSlice(input, varStart, varEnd));
-
-            varStart = -1;
-            continue;
-        }
-
-    }
-
-    return "operations success";
-}
-
-string parseInput(const string &input, vector<variable> &variables, stack<operation> &operationStack) {
-    cout << getVariables(input, variables) << endl;
-
-    cout << getOperations(input, operationStack) << endl;
-
-
-    return "success!";
-}
-
 string parseInput1(const string &input, stack<string> &unpExprs) {
 
     if ((input.find('/') == string::npos) &&

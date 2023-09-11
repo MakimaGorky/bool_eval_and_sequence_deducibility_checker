@@ -9,24 +9,14 @@
 
 using std::string, std::vector, std::stack, std::map, std::queue;
 
+//haha useless
 struct variable {
     string name;
     bool value;
 };
 
-struct operation {
-    string name;
-    variable operand1;
-    variable operand2;
-};
-
-struct expression {
-    stack<char> opera;
-};
-
 string readInput();
 string stringSlice(const string &curString, int indStart, int indEnd);
-string parseInput(const string &input, vector<variable> &variables, stack<operation> &operationStack);
 
 string parseInput1(const string &input, stack<string> &unpExprs);
 
