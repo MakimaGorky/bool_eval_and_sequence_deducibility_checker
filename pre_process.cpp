@@ -13,15 +13,18 @@ using std::string, std::cin, std::cout, std::endl, std::vector, std::stack, std:
 char help_button = 'H';
 //TODO make format string‼
 string starting_text = "Hello and Welcome to the sequence derivation checker!\nPress 'H' for help. Pls dont type excessive symbols!!\nLets check your sequence!";
-string help_text = "for help ask my developer";
+string help_text = "Almost no check for correctness of input - field for creativity\nOnly one-symbol variable names allowed.\nFor your |- use '/'\nGuide for logic operations:\n'>' is Implication;\n'&' is And;\n'|' is Or;\n'!' is Not;\n'~' is Equivalence;\n'+' is Xor (not ^ because haha);\nFor additional help ask my developer";
 
-void handleHelpButton(const string &input){
+bool handleHelpButton(const string &input){
     if ((input[0] == std::tolower(help_button)
         || input[0] == std::toupper(help_button))
         && (input.size() == 1) ) {
 
-        cout << help_text;
+        cout << help_text << endl;
+        cout << "pls type your expression:" << endl;
+        return true;
     }
+    return false;
 }
 
 std::string readInput() {
@@ -30,8 +33,11 @@ std::string readInput() {
     string input;
     std::getline(cin, input); // cin.getline(input, 1024);
 
-    handleHelpButton(input);
+    if (handleHelpButton(input)){
+        std::getline(cin, input);
+    }
 
+    // its very important part
     return input + " ";
 }
 
