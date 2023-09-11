@@ -1,0 +1,6 @@
+# ninja log v5
+5	480	7161332581408283	CMakeFiles/seqDerivCheck.dir/Quine_meth.cpp.obj	c21fb24db6deb1a5
+399	534	7161342050129615	seqDerivCheck.exe	ae5966ee0e014192
+5	336	7161330107714128	CMakeFiles/seqDerivCheck.dir/Reduct_meth.cpp.obj	f810154b3c82bd75
+2	399	7161342048799517	CMakeFiles/seqDerivCheck.dir/main.cpp.obj	f4644bf260df8746
+9	753	7161330111867262	CMakeFiles/seqDerivCheck.dir/pre_process.cpp.obj	4cffa95c5dc0f027
