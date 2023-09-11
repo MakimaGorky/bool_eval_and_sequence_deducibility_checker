@@ -11,7 +11,7 @@
 using std::string, std::cin, std::cout, std::endl, std::vector, std::stack, std::map;
 
 char help_button = 'H';
-//TODO make format string‼
+//TODO make format string‼🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠🤠‼
 string starting_text = "Hello and Welcome to the sequence derivation checker!\nPress 'H' for help. Pls dont type excessive symbols!!\nLets check your sequence!";
 string help_text = "Almost no check for correctness of input - field for creativity\nOnly one-symbol variable names allowed.\nFor your |- use '/'\nGuide for logic operations:\n'>' is Implication;\n'&' is And;\n'|' is Or;\n'!' is Not;\n'~' is Equivalence;\n'+' is Xor (not ^ because haha);\nFor additional help ask my developer";
 
