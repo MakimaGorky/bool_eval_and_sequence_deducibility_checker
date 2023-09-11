@@ -24,22 +24,29 @@ vector<string> taskPool {
 
 int main() {
     string inp = taskPool[13];
+
     stack<string> uExprs;
-    std::cout << parseInput1(inp, uExprs) << std::endl;
+    parseInput1(inp, uExprs);
 
     vector<string> exprs;
 
-    std::cout << parseExpressions(uExprs, exprs) << std::endl;
+    parseExpressions(uExprs, exprs);
 
-    for (int i = 0; i < exprs.size(); ++i) {
-        std::cout << exprs[i] << " - ";
-    }
-    std::cout << std::endl;
+//    //it's easier
+//    for (int i = 0; i < exprs.size(); ++i) {
+//        std::cout << exprs[i] << " - ";
+//    }
+//    std::cout << std::endl;
 
     map<string, bool> vars;
     getVariables(inp, vars);
 
-    std::cout << derivCheckQuine(exprs, vars);
+    if (derivCheckQuine(exprs, vars)) {
+        std::cout << "this equasion is deducible 😎" << std::endl;
+    }
+    else {
+        std::cout << "this equasion isn't deducible 😥" << std::endl;
+    }
 
     return 0;
 }
