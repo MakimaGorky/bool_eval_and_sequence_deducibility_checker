@@ -44,6 +44,7 @@ std::string readInput() {
 /// '/' is for |- ; '>' is for -> ; '+' is for xor ;
 std::array<string, 9> special_symbols {"(", ")", "/", ">", "&", "!", "|", "~", "+"};
 
+//std::string.substr("😉");
 string stringSlice(const string &curString, int indStart, int indEnd) {
 //    vector<char> res(indEnd - indStart + 1);
     string res = "";
