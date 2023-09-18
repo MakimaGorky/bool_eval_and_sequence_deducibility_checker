@@ -4,3 +4,5 @@
 yes, this is the hardcoded Quine method and more importantly
 
 the continuation of the endless race with my friend to program all the homework we are given
+
+and now its quite visual
