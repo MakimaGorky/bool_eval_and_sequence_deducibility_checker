@@ -276,3 +276,35 @@ bool solveExpr(const string &expr, map<string, bool> varVal) {
     }
     return stck.top();
 }
+
+string sequenceUnwrap(stack<string> expressions, string &unwrapped) {
+    stack<string> inverseCrutch;
+    while (!expressions.empty()) {
+        inverseCrutch.push(expressions.top());
+        expressions.pop();
+    }
+
+    int endParent = 0;
+    while (!inverseCrutch.empty()) {
+        string expr = "";
+        string appending = inverseCrutch.top();
+        if (appending[appending.size() - 1] == ' ') {
+            auto temp = appending.substr(0, appending.size() - 1);
+            appending = temp;
+        }
+        expr.append(appending);
+        if (inverseCrutch.size() != 1) {
+            expr.append(">(");
+            unwrapped.append(expr);
+            ++endParent;
+        }
+        else {
+            unwrapped.append(expr);
+            for (int i = 0; i < endParent; ++i) {
+                unwrapped.append(")");
+            }
+        }
+        inverseCrutch.pop();
+    }
+    return "ahahah lokh";
+}

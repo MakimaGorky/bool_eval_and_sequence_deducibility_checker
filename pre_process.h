@@ -28,5 +28,7 @@ string polishizeExpr(const string &expr);
 string parseExpressions(stack<string> &unpExprs, vector<string> &rpnExprs);
 bool solveExpr(const string &expr, map<string, bool> varVal);
 
+string sequenceUnwrap(stack<string> expressions, string &unwrapped);
+
 
 #endif //SEQDERIVCHECK_PRE_PROCESS_H

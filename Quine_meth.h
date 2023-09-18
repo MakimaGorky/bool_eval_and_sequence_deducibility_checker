@@ -3,6 +3,8 @@
 
 #include "pre_process.h"
 
-bool derivCheckQuine(vector<string> expressions, map<string, bool> &variableValues);
+void expressionPrint(string baseExpression, map<string, bool> variableValues);
+
+bool derivCheckQuine(string &baseExpression, vector<string> expressions, map<string, bool> &variableValues);
 
 #endif //SEQDERIVCHECK_QUINE_METH_H
